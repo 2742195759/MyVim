@@ -1,0 +1,7 @@
+1.默认是这样的文件夹结构
+~/Important/MyVim/_MY_VIM_
+2.进入_MY_VIM_文件下运行.vim_setup.sh
+
+
+前提是运行了INSTALL_UBUNTU
+就完成了VIM的全部的安装，

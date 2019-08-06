@@ -1,0 +1,24 @@
+1.  
+慎用imap和inoremap,因为你要记得，insert模式下，你的没一个<BS>之类的都是一个映射其实．然后通过这个映射来删除信息
+    其次，注意你直接写的imap下的，会进行转义．但是你的return的不会．因为这个是解释过程会进行转义(TODO)
+imap <C-B> <C-U> #会进行删除全部
+inoremap <C-B> <BS> 什么都不干
+
+2. <Plug> <SID> 
+
+3. function 
+
+4. build_in function
+getline('.')
+getcurpos()
+col('.')
+col('"x')
+strridx()
+stridx()
+match()
+strlen()
+let a = ['1' , '2']
+if a[0] == '1' 
+    XXX
+endif
+l:var a:0

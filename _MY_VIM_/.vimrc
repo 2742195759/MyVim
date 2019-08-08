@@ -51,15 +51,18 @@ set hlsearch
 set backspace=indent,eol,start whichwrap+=<,>,[,]
 set ofu=syntaxcomplete#Complete
 
-
+let mapleader = " "
 set mouse=a
 
 " option for foldmethod
 set fdm=marker
 set foldcolumn=1
-
 colorscheme molokai
+" alt key and some before map <M-a> command
 source ~/Important/MyVim/_MY_VIM_/AltKeyStart.vimrc
+" common insert tools
+source ~/Important/MyVim/_MY_VIM_/VimInsert.vimrc 
+" the customized key map for windows and tabs
 source ~/Important/MyVim/_MY_VIM_/WindowTabeSwitch.vimrc
 if (or(&filetype == 'c',&filetype=='cpp'))
 	source ~/Important/MyVim/_MY_VIM_/VimCpp.vimrc
@@ -69,14 +72,20 @@ elseif (&filetype == 'python')
     set commentstring=#%s
     source ~/Important/MyVim/_MY_VIM_/VimPython.vimrc
 end
-source ~/Important/MyVim/_MY_VIM_/VimInsert.vimrc
 
 " options for delimitMate
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
 nnoremap gs :w<cr>
 nnoremap gc :
+
 " for special delete like _ WORD
-nmap <space> :
+
 inoreabbrev #b """
 inoreabbrev #e """
+" some useful customed key leader
+map <leader>r :source ~/.vimrc<cr>
+map <leader>t :tabe %<cr>
+map <leader>q :q<cr>
+map <leader>gf :new <cfile><cr>
+map <leader>vgf :vne <cfile><cr> 

@@ -14,4 +14,10 @@ function! GenerateDeleteStr() "{{{
     return repeat('', l:num_back)
 endfunction "}}}
 
-imap <expr> <C-B> GenerateDeleteStr()
+"CTRL+H / CTRL+BACK_SPACE
+imap <expr>  GenerateDeleteStr() 
+vnoremap  <leader>9 :s/\%'>/)<cr>:s/\%'</(<cr>`<h
+vnoremap  <leader>[ :s/\%'>/]<cr>:s/\%'</[<cr>`<h
+inoremap  <M-f> <esc>^v$:s/\%'>/)<cr>:s/\%'</(<cr>`<ha
+inoremap  <M-l> <end>
+inoremap  <M-h> <esc>^i

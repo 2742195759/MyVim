@@ -13,11 +13,12 @@ set <M-1>=1  "切换tab , prev
 set <M-2>=2  "切换tab , next 
 set <M-o>=o  "Jump前一个
 set <M-i>=i  "Jump后一个
-set <M-F>=F  "切换Source/Head文件
 set <M-b>=b  "切换Source/Head文件
-set <M-(>=(  "切换Source/Head文件
 set <M-m>=m  "切换Source/Head文件
-"set <M->=  "换行，但是会执行
+set <M-h>=h  "切换Source/Head文件
+set <M-l>=l  "切换Source/Head文件
+
+"uet <M->=  "换行，但是会执行
 nnoremap  <M-o> <C-o>
 nnoremap  <M-i> <C-i>
 
@@ -28,3 +29,4 @@ syntax keyword xkque xkque
 syntax keyword xkans xkans
 highlight link xkque Error
 highlight link xkans DiffAdd 
+
